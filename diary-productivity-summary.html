@@ -18,6 +18,9 @@
     <!-- CSS Start -->
     <link href="css/main.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/fontawesome.css" rel="stylesheet"  />
+	<!-- Footable CSS Start-->
+	<link href="css/footable.bootstrap.min.css" rel="stylesheet"  />
+	<!-- Footable CSS End-->
     <link href="css/screen.css" rel="stylesheet"  />
 	<link href="css/developer.css" rel="stylesheet"  />
 	
@@ -201,60 +204,259 @@
 					<div class="row">
 						<div class="col-md-12 ">
 							<div class="m-0 m-xl-3 mt-md-3">
-								<h1 class="heading text-uppercase">Add Skillsets</h1>
+								<h1 class="heading text-uppercase">DIARY PRODUCTIVITY SUMMARY</h1>
 								<a href="profile.html" class="btn-back"><i class="fas fa-chevron-left"></i> Back to Profile</a>
 								
-								<form>
-									<div class="skillsets-hld p-3 mt-4">
-										<div class="row add-edit-form">
-											<div class="form-group col-md-6 ">
-												<label for="skillCategory">Skill Category</label>
-												<select class="selectpicker" id="skillCategory">
-													<option>Please Select</option>
-													<option>Skill Category 1</option>
-													<option>Skill Category 2</option>
-												</select>
-												<div class="invalid-feedback">Please provide Skill Category</div>
-											</div>
-											<div class="form-group col-md-6 ">
-												<label for="skillType">Skill Type</label>
-												<select class="selectpicker" id="skillType">
-													<option>Please Select</option>
-													<option>Skill Type 1</option>
-													<option>Skill Type 2</option>
-												</select>
-												<div class="invalid-feedback">Please provide Skill Type</div>
-											</div>
-											<div class="form-group col-md-6 ">
-												<label for="skillset">Skillset</label>
-												<select class="selectpicker" id="skillset">
-													<option>Please Select</option>
-													<option>Skillset 1</option>
-													<option>Skillset 2</option>
-												</select>
-												<div class="invalid-feedback">Please provide Skillset</div>
-											</div>
-											<div class="form-group col-md-6 ">
-												<label for="level">Level</label>
-												<select class="selectpicker" id="level">
-													<option>Please Select</option>
-													<option>Level 1</option>
-													<option>Level 2</option>
-												</select>
-												<div class="invalid-feedback">Please provide Level</div>
-											</div>
-											<div class="form-group col-md-12 ">
-												<label for="justification">Justification</label>
-												<textarea class="form-control" id="justification" rows="6"></textarea>
-												<div class="invalid-feedback">Please provide Justification</div>
+								<h3 class="light-blue-heading">Subordinate Details</h3>
+								<article class="profile-details mt-3">
+									<div class="row">
+										<div class="col-md-3">
+											<span class="rounded-circle profile-img">
+												<img class="rounded-circle profile-user" src="images/my-profile-pic.jpg" alt="Header Avatar">
+											</span>
+										</div>
+										<div class="col-md-9">
+											<div class="row">
+												<div class="col-md-9">
+													<h2 class="profile-heading">Khadijah binti Musa <span>S52406</span></h2>
+													<ul class="profile-list">
+														<li>
+															<span class="profile-list-icon"><i class="fas fa-user-tie"></i></span>
+															<span class="profile-list-text">Asst Mgr Application UI Designer</span>
+														</li>
+														<li>
+															<span class="profile-list-icon"><i class="fas fa-suitcase"></i></span>
+															<span class="profile-list-text">Division IT Assurance & Services​</span>
+														</li>
+														<li>
+															<span class="profile-list-icon"><i class="fas fa-mobile-alt"></i></span>
+															<span class="profile-list-text"><a href="tel:0123456789">012-3456789</a></span>
+														</li>
+														<li>
+															<span class="profile-list-icon"><i class="fas fa-mail-bulk"></i></span>
+															<span class="profile-list-text"><a href="mailto:maimunah.mohammad@tm.com.my">maimunah.mohammad@tm.com.my</a></span>
+														</li>
+													</ul>
+													<p class="profile-text mb-0">Telekom Malaysia Berhad</p>
+												</div>
+												<div class="col-md-3 align-self-center">
+													<a href="mailto:maimunah.mohammad@tm.com.my?subject=The%20subject%20of%20the%20mail"" class="btn btn-green d-inline-block mobile-width-100 px-3 mt-3 mt-md-0"> <i class="fas fa-envelope-open-text"></i> Send Email</a>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="text-right mt-3 mb-4">
-										<button type="submit" class="btn btn-green d-inline-block px-3"> <i class="fas fa-save mr-2"></i> Save & Back</button>
-									</div>
-								</form>
+								</article>
 								
+								<ul class="qrcode-list profile-details mt-2 mt-md-2">
+									<li>
+										<header>
+											<h2>Check-Ins</h2>
+										</header>
+										<span class="qrcode-body">
+											<span class="qrcode-row">
+												<span class="qr-icon">
+													<i class="fas fa-map-marker-alt"></i>
+												</span>
+												<span class="qr-text">
+													<p>Current Location: <br>154, Jalan Parklands 2, Semenyih Parklands, 43700 <br>Beranang, Selangor</p>
+												</span>
+											</span>
+										</span>
+									</li>
+									<li>
+										<header>
+											<h2>Diary Productivity Summary</h2>
+										</header>
+										<span class="qrcode-body">
+											<ul class="dayweek-list mt-3">
+												<li>
+													<span class="dayweek-left rounded-circle">
+														<img src="images/day-and-night.png" alt="">
+													</span>
+													<span class="dayweek-right">
+														<h3>Day</h3>
+														<h4 class="bad">10%</h4>
+													</span>
+												</li>
+												<li>
+													<span class="dayweek-left rounded-circle">
+														<img src="images/weekly-calendar.png" alt="">
+													</span>
+													<span class="dayweek-right">
+														<h3>Weekly</h3>
+														<h4 class="good">80%</h4>
+														<!-- Good class = "good", Avg class ="avg", Bad class ="bad" -->
+													</span>
+												</li>
+											</ul>
+										</span>
+									</li>
+								</ul>
+															
+								<h3 class="light-blue-heading">List of Diary Entries</h3>
+								
+								<div class="table-hld mb-4 mx-0 mx-md-4">
+									<!-- Table Filter -->
+									<div class="table-filter mt-4 mb-0">
+										<form>
+										  <div class="form-row align-items-center justify-content-between lde-hld">
+											<div class="col-auto">
+												<p class="actual-hours">Actual Hours <span>8</span></p>
+											</div>
+											
+											<div class="col-auto">
+												<div class="form-group d-flex justify-content-end align-items-end dps-dd">
+													<label for="from">Search by date</label>
+													<div class="control mobile-width-100 ml-0 ml-md-2">
+														 <input type="text" id="dateTime1" />
+													</div>
+												</div>
+											</div>
+										  </div>
+										</form>
+									</div>
+									
+									<!-- Table HTML -->
+									<div class="table-responsive mt-3">
+										<table class="table table-custom">
+										  <thead>
+											<tr>
+											  <th width="100" data-breakpoints="xs sm">Date</th>
+											  <th data-breakpoints="xs sm">Hours</th>
+											  <th data-breakpoints="xs sm">Tag</th>
+											  <th data-breakpoints="xs sm "><a href="#">Type</a></th>
+											  <th><a href="#">ID/ Title</a></th>
+											  <th data-breakpoints="xs sm ">Details</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<!--
+											<tr class="no-data">
+												<td colspan="6">No data available in table</td>
+											</tr>
+											-->
+											<tr data-expanded="true">
+											  <td>
+												2022-2-01
+											  </td>
+											  <td>
+												3.5
+											  </td>
+											  <td>
+												Operation
+											  </td>
+											  <td>
+												02 Design
+											  </td>
+											  <td>
+												Lorem ipsum dolor sit amet, consetetur
+											  </td>
+											  <td>
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+											  </td>
+											</tr>
+											<tr>
+											  <td>
+												2022-2-01
+											  </td>
+											  <td>
+												1.0
+											  </td>
+											  <td>
+												Operation
+											  </td>
+											  <td>
+												03 Operation
+											  </td>
+											  <td>
+												Lorem ipsum dolor sit amet, consetetur
+											  </td>
+											  <td>
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+											  </td>
+											</tr>
+											<tr>
+											  <td>
+												2022-2-01
+											  </td>
+											  <td>
+												3.5
+											  </td>
+											  <td>
+												Project
+											  </td>
+											  <td>
+												04 Development
+											  </td>
+											  <td>
+												Lorem ipsum dolor sit amet, consetetur
+											  </td>
+											  <td>
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+											  </td>
+											</tr>
+											
+										  </tbody>
+										</table>
+									</div>
+									
+									<!-- Pagination -->
+									<div class="table-pager">
+									
+										<div class="table-pager-info my-2 mb-sm-0">
+											<span class="table-pager-detail mr-2">Item </span>
+											<select class="selectpicker" id="">
+												<option>10</option>
+												<option>20</option>
+												<option>50</option>
+												<option>100</option>
+											</select>
+										</div>
+										
+										<ul class="table-pager-nav my-2 mb-sm-0">
+											<li>
+												<a title="First" class="table-pager-link table-pager-link-first table-pager-link-disabled" disabled="disabled">
+													<i class="fas fa-angle-double-left"></i>
+												</a>
+											</li>
+											<li>
+												<a title="Previous" class="table-pager-link table-pager-link-prev table-pager-link-disabled" disabled="disabled">
+													<i class="fas fa-angle-left"></i>
+												</a>
+											</li>
+											<li style="display: none;">
+												<input type="text" class="datatable-pager-input form-control" title="Page number">
+											</li>
+											<li style="">
+												<a class="table-pager-link table-pager-link-number table-pager-link-active" data-page="1" title="1">1</a>
+											</li>
+											<li style="">
+												<a class="table-pager-link table-pager-link-number" title="2">2</a>
+											</li>
+											<li style="">
+												<a class="table-pager-link table-pager-link-number" title="3">3</a>
+											</li>
+											<li style="">
+												<a class="table-pager-link table-pager-link-number" title="4">4</a>
+											</li>
+											<li style="">
+												<a class="table-pager-link table-pager-link-number" title="5">5</a>
+											</li>
+											<li>
+												<a title="Next" class="table-pager-link table-pager-link-next">
+													<i class="fas fa-angle-right"></i>
+												</a>
+											</li>
+											<li>
+												<a title="Last" class="table-pager-link table-pager-link-last">
+													<i class="fas fa-angle-double-right"></i>
+												</a>
+											</li>
+										</ul>
+									
+									</div>
+								
+								</div>
 								
 							</div>
 						</div>
@@ -269,14 +471,29 @@
 		
 	</div>
 	
-	
-	
     <!-- JS Start -->
     <script src="js/main.min.js"></script>
 	<script src="js/simplebar.min.js"></script>
 	<script src="js/metisMenu.min.js"></script>
     <script src="js/common.ui.js"></script>
-	
+	<!-- Footable JS Start-->
+	<script src="js/moment.min.js"></script>
+	<script src="js/footable.js"></script>
+	<script>
+		jQuery(function($){
+				$('.table').footable();
+		});
+	</script>
+	<!-- Footable JS End-->
+	<script>  
+		 $(function() {
+		   $('#dateTime1').ejDatePicker({
+			 dateFormat: "dd/MM/yy",
+			 watermarkText: "DD/MM/YY",
+			  width: '100%'
+		   });
+		});
+	</script>
 
 	 <!-- JS End -->
 </body>

@@ -18,7 +18,11 @@
     <!-- CSS Start -->
     <link href="css/main.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/fontawesome.css" rel="stylesheet"  />
+	<!-- Footable CSS Start-->
+	<link href="css/footable.bootstrap.min.css" rel="stylesheet"  />
+	<!-- Footable CSS End-->
     <link href="css/screen.css" rel="stylesheet"  />
+	
 	<link href="css/developer.css" rel="stylesheet"  />
 	
 </head>
@@ -259,11 +263,11 @@
 												  <thead>
 													<tr>
 													  <th>Location</th>
-													  <th>From</th>
-													  <th>To</th>
-													  <th><a href="#">Duration</a></th>
-													  <th><a href="#">Status</a></th>
-													  <th>Actions</th>
+													  <th data-breakpoints="xs sm">From</th>
+													  <th data-breakpoints="xs sm">To</th>
+													  <th data-breakpoints="xs sm"><a href="#">Duration</a></th>
+													  <th data-breakpoints="xs"><a href="#">Status</a></th>
+													  <th data-breakpoints="xs">Actions</th>
 													</tr>
 												  </thead>
 												  <tbody>
@@ -272,7 +276,7 @@
 														<td colspan="6">No data available in table</td>
 													</tr>
 													-->
-													<tr>
+													<tr data-expanded="true">
 													  <td>
 														Menara TM - Level 27 - South - Seat 34
 													  </td>
@@ -567,6 +571,17 @@
 	<script src="js/simplebar.min.js"></script>
 	<script src="js/metisMenu.min.js"></script>
     <script src="js/common.ui.js"></script>
+	
+	<!-- Footable JS Start-->
+	<script src="js/moment.min.js"></script>
+	<script src="js/footable.js"></script>
+	<script>
+		jQuery(function($){
+				$('.table').footable();
+		});
+	</script>
+	<!-- Footable JS End-->
+	
 	<script>
 		$(function () {
 		  $('[data-toggle="tooltip"]').tooltip()

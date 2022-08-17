@@ -18,6 +18,9 @@
     <!-- CSS Start -->
     <link href="css/main.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/fontawesome.css" rel="stylesheet"  />
+	<!-- Footable CSS Start-->
+	<link href="css/footable.bootstrap.min.css" rel="stylesheet"  />
+	<!-- Footable CSS End-->
     <link href="css/screen.css" rel="stylesheet"  />
 	<link href="css/developer.css" rel="stylesheet"  />
 	
@@ -292,9 +295,9 @@
 												  <thead>
 													<tr>
 													  <th>Seat / Meeting Room</th>
-													  <th>Time</th>
-													  <th>Date</th>
-													  <th>Check In/Out</th>
+													  <th data-breakpoints="xs ">Time</th>
+													  <th data-breakpoints="xs ">Date</th>
+													  <th data-breakpoints="xs ">Check In/Out</th>
 													</tr>
 												  </thead>
 												  <tbody>
@@ -303,9 +306,9 @@
 														<td colspan="4">No data available in table</td>
 													</tr>
 													-->
-													<tr>
-													  <td>
-														<div class="d-flex align-items-center">
+													<tr data-expanded="true">
+													  <td class="table-profile-td">
+														<div class="d-flex align-items-center table-profile">
 															<div class="flex-shrink-0 mr-3 rounded-circle img-w50">
 																<img src="images/my-profile-pic.jpg" alt="image">
 															</div>
@@ -331,8 +334,8 @@
 													  </td>
 													</tr>
 													<tr>
-													  <td>
-														<div class="d-flex align-items-center">
+													  <td class="table-profile-td">
+														<div class="d-flex align-items-center table-profile">
 															<div class="flex-shrink-0 mr-3 rounded-circle img-w50">
 																<img src="images/my-profile-pic.jpg" alt="image">
 															</div>
@@ -579,6 +582,15 @@
 	<script src="js/metisMenu.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
     <script src="js/common.ui.js"></script>
+	<!-- Footable JS Start-->
+	<script src="js/moment.min.js"></script>
+	<script src="js/footable.js"></script>
+	<script>
+		jQuery(function($){
+				$('.table').footable();
+		});
+	</script>
+	<!-- Footable JS End-->
 	<script>
 	$(document).ready(function() {
 

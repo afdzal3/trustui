@@ -106,19 +106,19 @@
                                 </ul>
                             </li>
 							
-							<li class="mm-active">
+							<li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                    <i class="fa fa-solid fa-map-pin"></i>
                                     <span>Work From Any…</span>
                                 </a>
-                                <ul class="sub-menu mm-show" aria-expanded="true">
-                                    <li class="mm-active"><a href="location-checkin.html">Location Check-In</a></li>
-									<li><a href="location-history.html">Location History</a></li>
+                                <ul class="sub-menu" aria-expanded="true">
+                                    <li><a href="#">Location Check-In</a></li>
+									<li><a href="#">Location History</a></li>
                                 </ul>
                             </li>
 							
                             <li>
-								<a href="javascript: void(0);" class="has-arrow">
+								<a href="diary-overview.html" class="has-arrow">
                                    <i class="fa fa-solid fa-book"></i>
                                     <span>Diary</span>
                                 </a>
@@ -127,7 +127,7 @@
                                 </ul>
                             </li>
 
-                            <li>
+                            <li class="mm-active">
                                 <a href="news.html">
                                     <i class="fa fa-solid fa-bullhorn"></i>
                                     <span>News</span>
@@ -200,42 +200,100 @@
 					<!-- start page title -->
 					<div class="row">
 						<div class="col-md-12 ">
-							<div class="hld-left m-0 m-xl-3 mt-md-3">
-								<div class="row">
-									<div class="col-md-12 col-lg-12">
-										<h1 class="heading text-uppercase">Location Check-In</h1>
-										<h2 class="sub-heading">Please Access This Page Using Mobile Phone’s Web Browser For Better Location Detection.</h2>
-									</div>
-									
+							<div class="m-0 m-xl-3 mt-md-3">
+								<h1 class="heading text-uppercase">News</h1>
+								
+								<div class="table-filter mt-4 mb-4">
+									<form>
+									  <div class="form-row align-items-center justify-content-between">
+										<div class="col-auto">
+											<div class="form-row">
+												<div class="col-auto mb-3">
+													<select class="border-12 border-light selectpicker filters-select" id="">
+														<option value="*">Category</option>
+														<option value=".announcement">Announcement</option>
+														<option value=".festival">Festival</option>
+														<option value=".jobs">Jobs</option>
+														<option value=".campaign">Campaign</option>
+														<option value=".others">Others</option>
+													</select>
+												</div>
+												<div class="col-auto mb-3">
+													<select class="selectpicker filters-select" id="">
+														<option value="*">Month</option>
+														<option value=".january">January</option>
+														<option value=".february">February</option>
+														<option value=".march">March</option>
+														<option value=".april">April</option>
+														<option value=".may">May</option>
+														<option value=".june">June</option>
+														<option value=".july">July</option>
+														<option value=".august">August</option>
+														<option value=".september">September</option>
+														<option value=".october">October</option>
+														<option value=".november">November</option>
+														<option value=".december">December</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-auto mb-3">
+											<a href="add-news.html" class="btn btn-green d-inline-block px-3"><i class="fas fa-plus mr-2"></i> Add News</a>
+										</div>
+									  </div>
+									</form>
 								</div>
 								
-								<div class="row">
-									<div class="col-md-12">
-										<div class="location-checkin-hld">
-											<form>
-											  <div class="form-group row">
-												<label for="latitude" class="col-sm-2 col-form-label">Latitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="latitude" value="">
-												 <!-- <input type="text" readonly class="form-control-plaintext" id="latitude" value=""> -->
-												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="longitude" class="col-sm-2 col-form-label">Longitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="longitude" value="">
-												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="address" class="col-sm-2 col-form-label">Address</label>
-												<div class="col-sm-10">
-												  <textarea class="form-control" id="address" rows="3"></textarea>
-												</div>
-											  </div>
-											</form>
-										</div>
-									</div>
-								</div>
+								
+								
+								<ul class="news-list grid">
+									<li class="element-item festival january" data-category="festival">
+										<a href="news-details.html">
+											<span class="news-img">
+												<img src="images/nl-1.jpg" alt="News" />
+											</span>
+											<p class="news-date">January 31, 2022</p>
+											<h3 class="news-title">Happy Chinese New Year 2020 from GITD</h3>
+										</a>
+									</li>
+									<li class="element-item announcement october" data-category="announcement">
+										<a href="news-details.html">
+											<span class="news-img">
+												<img src="images/nl-2.jpg" alt="News" />
+											</span>
+											<p class="news-date">October 20, 2021</p>
+											<h3 class="news-title">TRUST Portal Maintenance Activity</h3>
+										</a>
+									</li>
+									<li class="element-item jobs october" data-category="jobs">
+										<a href="news-details.html">
+											<span class="news-img">
+												<img src="images/nl-3.jpg" alt="News" />
+											</span>
+											<p class="news-date">October 18, 2021</p>
+											<h3 class="news-title">Jobs Opening Group IT & Digital</h3>
+										</a>
+									</li>
+									<li class="element-item announcement october" data-category="announcement">
+										<a href="news-details.html">
+											<span class="news-img">
+												<img src="images/nl-4.jpg" alt="News" />
+											</span>
+											<p class="news-date">October 06, 2021</p>
+											<h3 class="news-title">TRUST Mobile Application</h3>
+										</a>
+									</li>
+									<li class="element-item campaign september" data-category="campaign">
+										<a href="news-details.html">
+											<span class="news-img">
+												<img src="images/nl-5.jpg" alt="News" />
+											</span>
+											<p class="news-date">September 22, 2021</p>
+											<h3 class="news-title">Switch To Microsoft OneDrive Campaign</h3>
+										</a>
+									</li>
+								</ul>
 								
 							</div>
 						</div>
@@ -257,28 +315,39 @@
 	<script src="js/simplebar.min.js"></script>
 	<script src="js/metisMenu.min.js"></script>
     <script src="js/common.ui.js"></script>
+	
+	<script src="js/isotope.pkgd.js"></script>
 	<script>
-		 var x;
-		function getLocation()
-		 {
-		if (navigator.geolocation)
-		{
-			navigator.geolocation.getCurrentPosition(showPosition);
-		}
-		else{x.innerHTML="Geolocation is not supported by this browser.";}
-		}
-		function showPosition(position)
-		{
-			
-			var v1 = position.coords.latitude;
-			var v2 = position.coords.longitude;
-			document.getElementById("latitude").setAttribute('value',v1) ;
-			document.getElementById("longitude").setAttribute('value',v2);
-		}
-		getLocation()
+		// init Isotope
+		var $grid = $('.grid').isotope({
+		  itemSelector: '.element-item',
+		  layoutMode: 'fitRows'
+		});
+		// filter functions
+		var filterFns = {
+		  // show if number is greater than 50
+		  numberGreaterThan50: function() {
+			var number = $(this).find('.number').text();
+			return parseInt( number, 10 ) > 50;
+		  },
+		  // show if name ends with -ium
+		  ium: function() {
+			var name = $(this).find('.name').text();
+			return name.match( /ium$/ );
+		  }
+		};
+		// bind filter on select change
+		$('.filters-select').on( 'change', function() {
+		  // get filter value from option value
+		  var filterValue = this.value;
+		  // use filterFn if matches value
+		  filterValue = filterFns[ filterValue ] || filterValue;
+		  $grid.isotope({ filter: filterValue });
+		});
+
 	</script>
+
 	 <!-- JS End -->
-	 
 </body>
 </html>
 

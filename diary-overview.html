@@ -19,6 +19,7 @@
     <link href="css/main.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/fontawesome.css" rel="stylesheet"  />
     <link href="css/screen.css" rel="stylesheet"  />
+	<link href="css/fullcalendar.css" rel="stylesheet"  />
 	<link href="css/developer.css" rel="stylesheet"  />
 	
 </head>
@@ -106,24 +107,24 @@
                                 </ul>
                             </li>
 							
-							<li class="mm-active">
+							<li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                    <i class="fa fa-solid fa-map-pin"></i>
                                     <span>Work From Any…</span>
                                 </a>
-                                <ul class="sub-menu mm-show" aria-expanded="true">
-                                    <li class="mm-active"><a href="location-checkin.html">Location Check-In</a></li>
+                                <ul class="sub-menu" aria-expanded="true">
+                                    <li><a href="location-checkin.html">Location Check-In</a></li>
 									<li><a href="location-history.html">Location History</a></li>
                                 </ul>
                             </li>
 							
-                            <li>
+                            <li class="mm-active">
 								<a href="javascript: void(0);" class="has-arrow">
                                    <i class="fa fa-solid fa-book"></i>
                                     <span>Diary</span>
                                 </a>
-                                <ul class="sub-menu" aria-expanded="true">
-                                    <li><a href="#">Diary Entries</a></li>
+                                <ul class="sub-menu mm-show" aria-expanded="true">
+                                    <li><a href="diary-entries.html">Diary Entries</a></li>
                                 </ul>
                             </li>
 
@@ -202,37 +203,79 @@
 						<div class="col-md-12 ">
 							<div class="hld-left m-0 m-xl-3 mt-md-3">
 								<div class="row">
-									<div class="col-md-12 col-lg-12">
-										<h1 class="heading text-uppercase">Location Check-In</h1>
-										<h2 class="sub-heading">Please Access This Page Using Mobile Phone’s Web Browser For Better Location Detection.</h2>
+									<div class="col-md-7 col-lg-8">
+										<h1 class="heading text-uppercase">DIARY OVERVIEW</h1>
 									</div>
+									<div class="col-md-5 col-lg-4">
 									
+									</div>
+								</div>
+								<div class="row mt-4">
+									<div class="col-md-6 align-self-center">
+										<h2 class="h3-heading mb-3 mb-md-0 height-45">Today’s Productivity</h2>
+										<ul class="diary-data-list">
+											<li>
+												<span>Actual Hours</span>
+												<p>0</p>
+											</li>
+											<li>
+												<span>Expected Hours</span>
+												<p>8.00</p>
+											</li>
+											<li>
+												<span>Productivity</span>
+												<p>0%</p>
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-4 align-self-center">
+												<h2 class="h3-heading mb-3 mb-md-0 mt-4 mt-md-0">Past 7 days</h2>
+											</div>
+											<div class="col-md-8 text-right">
+												<div class="custom-day-hld">
+													<span class="icon"><i class="fas fa-calendar icon-color-blue"></i></span>
+													<span id="backDate"></span>
+													<span class="txt">to</span>
+													<span id="currentDate"></span>
+												</div>
+											</div>
+										</div>
+										<ul class="diary-data-list">
+											<li>
+												<span>Total Actual Hours</span>
+												<p>16.0</p>
+											</li>
+											<li>
+												<span>Total Actual Hours</span>
+												<p>31.5</p>
+											</li>
+											<li>
+												<span>Productivity</span>
+												<p>50%</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								
+								<div class="row mt-5">
+									<div class="col-md-6 align-self-center">
+										<h2 class="h3-heading mb-md-0 mb-3">Diary Entries</h2>
+									</div>
+									<div class="col-md-6 text-left text-md-right">
+										<select class="border-12 border-light selectpicker" id="">
+										  <option>Month</option>
+										  <option>Week</option>
+										</select>
+										<a href="add-diary.html" class="btn btn-green d-inline-block px-3 ml-md-3 ml-0 mt-3 mt-md-0" ><i class="fas fa-plus mr-2"></i> Add Diary</a>
+									</div>
 								</div>
 								
 								<div class="row">
 									<div class="col-md-12">
-										<div class="location-checkin-hld">
-											<form>
-											  <div class="form-group row">
-												<label for="latitude" class="col-sm-2 col-form-label">Latitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="latitude" value="">
-												 <!-- <input type="text" readonly class="form-control-plaintext" id="latitude" value=""> -->
-												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="longitude" class="col-sm-2 col-form-label">Longitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="longitude" value="">
-												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="address" class="col-sm-2 col-form-label">Address</label>
-												<div class="col-sm-10">
-												  <textarea class="form-control" id="address" rows="3"></textarea>
-												</div>
-											  </div>
-											</form>
+										<div class="calendar-hld mt-4 mb-4">
+											<div id='calendar'></div>
 										</div>
 									</div>
 								</div>
@@ -251,32 +294,172 @@
 	</div>
 	
 	
+	<!-- Delete Modal --> 
+	<div class="modal" id="deleteModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-custom modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header border-bottom-0">
+			<h5 class="modal-title text-uppercase text-center font-weight-medium w-100 mt-3"></h5>
+			<button type="button" class="close modal-custom-close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body delete-popup px-3 pt-0 pb-4">
+			<h2 class="text-center text-error font-weight-medium mb-3">
+				<i class="fas fa-trash icon-color-error"></i>
+				<br>
+				Delete
+			</h2>
+			<p class="text-center px-3">Are you sure you want to delete the reservation? <br>- Copy needed</p>
+			<div class="text-center btn-hld">
+				<button class="btn btn-primary btn-blue" type="button">Proceed</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
 	
     <!-- JS Start -->
     <script src="js/main.min.js"></script>
 	<script src="js/simplebar.min.js"></script>
 	<script src="js/metisMenu.min.js"></script>
+	
+	<script src="js/fullcalendar.js"></script>
+	
     <script src="js/common.ui.js"></script>
+	
 	<script>
-		 var x;
-		function getLocation()
-		 {
-		if (navigator.geolocation)
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+		headerToolbar: {
+		  left: '',
+		  center: 'prev,title,next',
+		  right: ''
+		},
+	  showNonCurrentDates: false,
+      initialDate: '2022-08-11',
+	  initialView: 'dayGridMonth',
+      editable: false,
+      selectable: true,
+      businessHours: false,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: [
+        {
+          title: '0 hours',
+          start: '2022-08-01',
+		  color: '#FF7F7F80'
+        },
 		{
-			navigator.geolocation.getCurrentPosition(showPosition);
-		}
-		else{x.innerHTML="Geolocation is not supported by this browser.";}
-		}
-		function showPosition(position)
+          title: 'Leave',
+          start: '2022-08-01',
+		  color: '#F2F2F2'
+        },
 		{
-			
-			var v1 = position.coords.latitude;
-			var v2 = position.coords.longitude;
-			document.getElementById("latitude").setAttribute('value',v1) ;
-			document.getElementById("longitude").setAttribute('value',v2);
-		}
-		getLocation()
-	</script>
+          title: '8 hours',
+          start: '2022-08-02',
+		  color: '#EEFDF0'
+        },
+		{
+          title: '6 hours',
+          start: '2022-08-03',
+		  color: '#EEFDF0'
+        },
+		{
+          title: '8 hours',
+          start: '2022-08-04',
+		  color: '#EEFDF0'
+        },
+		{
+          title: '8 hours',
+          start: '2022-08-05',
+		  color: '#EEFDF0'
+        },
+        {
+          title: '3 hours',
+          start: '2022-08-07',
+		  color: '#FDF6EE'
+        },
+		{
+          title: '8 hours',
+          start: '2022-08-08',
+		  color: '#EEFDF0'
+        },
+        {
+          title: 'Annual Leave',
+          start: '2022-08-09',
+		  color: '#FDF6EE'
+        },
+        {
+          title: '5 hours',
+          start: '2022-08-10',
+		  color: '#EEFDF0'
+        },
+        {
+          title: 'Meeting',
+          start: '2022-08-12',
+		  color:'#F7EEFD'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2022-08-15',
+		  color:'#F7EEFD'
+        }
+      ]
+    });
+	
+	
+
+    calendar.render();
+	
+	function addIcon() {
+      var futureDays = document.querySelectorAll('.fc-day-future > .fc-daygrid-day-frame > .fc-daygrid-day-top');
+      for (i = 0; i < futureDays.length; ++i) {
+        if (futureDays[i].querySelectorAll(".fc-daygrid-event-harness").length === 0 &&
+          futureDays[i].querySelectorAll(".fa-plus").length === 0) {
+          futureDays[i].innerHTML = futureDays[i].innerHTML + '<a href="add-diary.html" class="text-center plus-icon"><i class="calendar-icon fas fa-plus cal-green"></i></span></a>';
+        }
+      }
+	  
+
+      var pastDays = document.querySelectorAll('.fc-day-past > .fc-daygrid-day-frame > .fc-daygrid-day-top');
+      for (var i = 0; i < pastDays.length; ++i) {
+        if (pastDays[i].querySelectorAll(".fc-daygrid-event-harness").length === 0 &&
+          pastDays[i].querySelectorAll(".fa-times").length === 0) {
+          pastDays[i].innerHTML = pastDays[i].innerHTML + '<a href="edit-diary.html" class="text-center plus-icon"><i class="calendar-icon fas fa-plus cal-gray"></i></span></a>';
+        }
+      }
+	  
+    }
+	
+	
+
+    document.querySelectorAll('.fc-button').forEach(function(el){
+      el.addEventListener('click', function() {
+        addIcon()
+      });
+    }); 
+
+    addIcon();
+	
+	
+	
+  });
+  
+  // Current Day & Last 7 Days
+	var d=new Date(); 
+	var strDate = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
+	$("#currentDate").append(strDate);
+	
+	var bd = new Date(d.setDate(d.getDate() - 7));
+	var backDate = bd.getDate() + "-" + (bd.getMonth()+1) + "-" + bd.getFullYear();
+	$("#backDate").append(backDate);
+	
+
+</script>
 	 <!-- JS End -->
 	 
 </body>

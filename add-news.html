@@ -106,19 +106,19 @@
                                 </ul>
                             </li>
 							
-							<li class="mm-active">
+							<li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                    <i class="fa fa-solid fa-map-pin"></i>
                                     <span>Work From Any…</span>
                                 </a>
-                                <ul class="sub-menu mm-show" aria-expanded="true">
-                                    <li class="mm-active"><a href="location-checkin.html">Location Check-In</a></li>
-									<li><a href="location-history.html">Location History</a></li>
+                                <ul class="sub-menu" aria-expanded="true">
+                                    <li><a href="#">Location Check-In</a></li>
+									<li><a href="#">Location History</a></li>
                                 </ul>
                             </li>
 							
                             <li>
-								<a href="javascript: void(0);" class="has-arrow">
+								<a href="diary-overview.html" class="has-arrow">
                                    <i class="fa fa-solid fa-book"></i>
                                     <span>Diary</span>
                                 </a>
@@ -127,7 +127,7 @@
                                 </ul>
                             </li>
 
-                            <li>
+                            <li class="mm-active">
                                 <a href="news.html">
                                     <i class="fa fa-solid fa-bullhorn"></i>
                                     <span>News</span>
@@ -200,43 +200,57 @@
 					<!-- start page title -->
 					<div class="row">
 						<div class="col-md-12 ">
-							<div class="hld-left m-0 m-xl-3 mt-md-3">
-								<div class="row">
-									<div class="col-md-12 col-lg-12">
-										<h1 class="heading text-uppercase">Location Check-In</h1>
-										<h2 class="sub-heading">Please Access This Page Using Mobile Phone’s Web Browser For Better Location Detection.</h2>
-									</div>
-									
-								</div>
+							<div class="m-0 m-xl-3 mt-md-3">
+								<h1 class="heading text-uppercase">Add News</h1>
+								<a href="news.html" class="btn-back"><i class="fas fa-chevron-left"></i> Back to News List</a> 
 								
-								<div class="row">
-									<div class="col-md-12">
-										<div class="location-checkin-hld">
-											<form>
-											  <div class="form-group row">
-												<label for="latitude" class="col-sm-2 col-form-label">Latitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="latitude" value="">
-												 <!-- <input type="text" readonly class="form-control-plaintext" id="latitude" value=""> -->
+								<form>
+									<div class="skillsets-hld add-news p-3 mt-4">
+										<div class="row add-edit-form">
+											<div class="form-group required col-md-12">
+												<label for="newsTitle" class="control-label">News Title</label>
+												<input class="form-control" id="newsTitle" type="text" placeholder="Enter News Title" />
+												<div class="invalid-feedback">Please provide News Title</div>
+											</div>
+											<div class="form-group required col-md-12">
+												<label for="category" class="control-label">Category</label>
+												<select class="selectpicker" id="category">
+													<option>Please Select</option>
+													<option>Announcement</option>
+													<option>Festival</option>
+													<option>Jobs</option>
+													<option>Campaign</option>
+													<option>Others</option>
+												</select>
+												<div class="invalid-feedback">Please provide Category</div>
+											</div>
+											<div class="form-group required col-md-12">
+												<label for="date" class="control-label">Date</label>
+												<div class="control mobile-width-100 ml-0 ml-md-2">
+													<input type="text" id="date1" value="" />
 												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="longitude" class="col-sm-2 col-form-label">Longitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="longitude" value="">
+												<div class="invalid-feedback">Please provide Date</div>
+											</div>
+											<div class="form-group col-md-12">
+												<label for="uploadNewsImage" class="control-label">Upload News Image</label>
+												<div class="custom-file-upload">
+													<button type="button" class="btn btn-gray d-inline-block px-4"><i class="fas fa-upload mr-2"></i> Upload Image</button>
+													<input type="text">
+													<input type="file">
 												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="address" class="col-sm-2 col-form-label">Address</label>
-												<div class="col-sm-10">
-												  <textarea class="form-control" id="address" rows="3"></textarea>
-												</div>
-											  </div>
-											</form>
+												<div class="invalid-feedback">Please provide Upload News Image</div>
+											</div>
+											<div class="form-group col-md-12 ">
+												<label for="newsDetails" class="control-label">News Details</label>
+												<textarea id="mytextarea"></textarea>
+												<div class="invalid-feedback">Please provide Details</div>
+											</div>
 										</div>
 									</div>
-								</div>
-								
+									<div class="text-right mt-3 mb-4">
+										<button type="submit" class="btn btn-primary btn-blue d-inline-block px-2"> Post</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -257,28 +271,44 @@
 	<script src="js/simplebar.min.js"></script>
 	<script src="js/metisMenu.min.js"></script>
     <script src="js/common.ui.js"></script>
+	
+	<script src="js/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+      tinymce.init({
+        selector: '#mytextarea',
+		menubar: false,
+		height : "250",
+        plugins: [
+          'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+          'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+          'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+        ],
+        toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+          'alignleft aligncenter alignright alignjustify | ' +
+          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+      });
+    </script>
+	
 	<script>
-		 var x;
-		function getLocation()
-		 {
-		if (navigator.geolocation)
-		{
-			navigator.geolocation.getCurrentPosition(showPosition);
-		}
-		else{x.innerHTML="Geolocation is not supported by this browser.";}
-		}
-		function showPosition(position)
-		{
-			
-			var v1 = position.coords.latitude;
-			var v2 = position.coords.longitude;
-			document.getElementById("latitude").setAttribute('value',v1) ;
-			document.getElementById("longitude").setAttribute('value',v2);
-		}
-		getLocation()
+	$(function() {
+	   $('#date1').ejDatePicker({
+		 dateFormat: "MMMM, dd yy",
+		 watermarkText: "Month, Day Year",
+		  width: '250px'
+	   });
+	});
 	</script>
+	
+	<script>
+	 $(document).ready(function(){
+        $('.custom-file-upload input[type="file"]').change(function(e){
+            $(this).siblings('input[type="text"]').val(e.target.files[0].name);
+        });
+    });
+	</script>
+	
 	 <!-- JS End -->
-	 
 </body>
 </html>
 

@@ -106,19 +106,19 @@
                                 </ul>
                             </li>
 							
-							<li class="mm-active">
+							<li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                    <i class="fa fa-solid fa-map-pin"></i>
                                     <span>Work From Any…</span>
                                 </a>
-                                <ul class="sub-menu mm-show" aria-expanded="true">
-                                    <li class="mm-active"><a href="location-checkin.html">Location Check-In</a></li>
-									<li><a href="location-history.html">Location History</a></li>
+                                <ul class="sub-menu" aria-expanded="true">
+                                    <li><a href="#">Location Check-In</a></li>
+									<li><a href="#">Location History</a></li>
                                 </ul>
                             </li>
 							
                             <li>
-								<a href="javascript: void(0);" class="has-arrow">
+								<a href="diary-overview.html" class="has-arrow">
                                    <i class="fa fa-solid fa-book"></i>
                                     <span>Diary</span>
                                 </a>
@@ -127,7 +127,7 @@
                                 </ul>
                             </li>
 
-                            <li>
+                            <li class="mm-active">
                                 <a href="news.html">
                                     <i class="fa fa-solid fa-bullhorn"></i>
                                     <span>News</span>
@@ -200,41 +200,48 @@
 					<!-- start page title -->
 					<div class="row">
 						<div class="col-md-12 ">
-							<div class="hld-left m-0 m-xl-3 mt-md-3">
-								<div class="row">
-									<div class="col-md-12 col-lg-12">
-										<h1 class="heading text-uppercase">Location Check-In</h1>
-										<h2 class="sub-heading">Please Access This Page Using Mobile Phone’s Web Browser For Better Location Detection.</h2>
-									</div>
-									
-								</div>
+							<div class="m-0 m-xl-3 mt-md-3">
+								<h1 class="heading text-uppercase">News</h1>
+								<h2 class="news-sub-heading">Switch to Microsoft ONEDRIVE Campaign</h2>
+								<a href="news.html" class="btn-back"><i class="fas fa-chevron-left"></i> Back to News List</a> 
 								
-								<div class="row">
-									<div class="col-md-12">
-										<div class="location-checkin-hld">
-											<form>
-											  <div class="form-group row">
-												<label for="latitude" class="col-sm-2 col-form-label">Latitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="latitude" value="">
-												 <!-- <input type="text" readonly class="form-control-plaintext" id="latitude" value=""> -->
-												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="longitude" class="col-sm-2 col-form-label">Longitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="longitude" value="">
-												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="address" class="col-sm-2 col-form-label">Address</label>
-												<div class="col-sm-10">
-												  <textarea class="form-control" id="address" rows="3"></textarea>
-												</div>
-											  </div>
-											</form>
+								<div class="news-details mt-4">
+									<div class="row">
+										<div class="col-md-3">
+										
+										</div>
+										<div class="col-md-6">
+											<div class="news-big-img">
+												<img src="images/nl-1.jpg" alt="News" />
+											</div>
+										</div>
+										<div class="col-md-3">
+											
 										</div>
 									</div>
+									<div class="row">
+										<div class="col-md-3">
+											<p>September 22, 2021</p>
+											<p>Campaign</p>
+										</div>
+										<div class="col-md-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										</div>
+										<div class="col-md-3">
+											
+										</div>
+									</div>
+								</div>
+								
+								<div class="more-news mt-3 mt-md-5 mb-3 mb-md-5">
+									<h2 class="news-sub-heading">More News</h2>
+									<ul class="">
+										<li><a href="#"><img src="images/nl-1.jpg" alt="News" /></a></li>
+										<li><a href="#"><img src="images/nl-2.jpg" alt="News" /></a></li>
+										<li><a href="#"><img src="images/nl-3.jpg" alt="News" /></a></li>
+										<li><a href="#"><img src="images/nl-4.jpg" alt="News" /></a></li>
+										
+									</ul>
 								</div>
 								
 							</div>
@@ -257,28 +264,10 @@
 	<script src="js/simplebar.min.js"></script>
 	<script src="js/metisMenu.min.js"></script>
     <script src="js/common.ui.js"></script>
-	<script>
-		 var x;
-		function getLocation()
-		 {
-		if (navigator.geolocation)
-		{
-			navigator.geolocation.getCurrentPosition(showPosition);
-		}
-		else{x.innerHTML="Geolocation is not supported by this browser.";}
-		}
-		function showPosition(position)
-		{
-			
-			var v1 = position.coords.latitude;
-			var v2 = position.coords.longitude;
-			document.getElementById("latitude").setAttribute('value',v1) ;
-			document.getElementById("longitude").setAttribute('value',v2);
-		}
-		getLocation()
-	</script>
+	
+	
+
 	 <!-- JS End -->
-	 
 </body>
 </html>
 

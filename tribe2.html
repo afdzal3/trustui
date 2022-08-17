@@ -106,19 +106,19 @@
                                 </ul>
                             </li>
 							
-							<li class="mm-active">
+							<li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                    <i class="fa fa-solid fa-map-pin"></i>
                                     <span>Work From Any…</span>
                                 </a>
-                                <ul class="sub-menu mm-show" aria-expanded="true">
-                                    <li class="mm-active"><a href="location-checkin.html">Location Check-In</a></li>
-									<li><a href="location-history.html">Location History</a></li>
+                                <ul class="sub-menu" aria-expanded="true">
+                                    <li><a href="#">Location Check-In</a></li>
+									<li><a href="#">Location History</a></li>
                                 </ul>
                             </li>
 							
                             <li>
-								<a href="javascript: void(0);" class="has-arrow">
+								<a href="diary-overview.html" class="has-arrow">
                                    <i class="fa fa-solid fa-book"></i>
                                     <span>Diary</span>
                                 </a>
@@ -134,7 +134,7 @@
                                 </a>
                             </li>
 
-							<li>
+							<li class="mm-active">
                                 <a href="tribe2.html">
                                     <i class="fa fa-solid fa-compass"></i>
                                     <span>TRIBE 2.0</span>
@@ -200,40 +200,35 @@
 					<!-- start page title -->
 					<div class="row">
 						<div class="col-md-12 ">
-							<div class="hld-left m-0 m-xl-3 mt-md-3">
-								<div class="row">
-									<div class="col-md-12 col-lg-12">
-										<h1 class="heading text-uppercase">Location Check-In</h1>
-										<h2 class="sub-heading">Please Access This Page Using Mobile Phone’s Web Browser For Better Location Detection.</h2>
-									</div>
-									
-								</div>
+							<div class="m-0 m-xl-3 mt-md-3">
 								
 								<div class="row">
 									<div class="col-md-12">
-										<div class="location-checkin-hld">
-											<form>
-											  <div class="form-group row">
-												<label for="latitude" class="col-sm-2 col-form-label">Latitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="latitude" value="">
-												 <!-- <input type="text" readonly class="form-control-plaintext" id="latitude" value=""> -->
-												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="longitude" class="col-sm-2 col-form-label">Longitude</label>
-												<div class="col-sm-10">
-												  <input type="text" class="form-control" id="longitude" value="">
-												</div>
-											  </div>
-											  <div class="form-group row">
-												<label for="address" class="col-sm-2 col-form-label">Address</label>
-												<div class="col-sm-10">
-												  <textarea class="form-control" id="address" rows="3"></textarea>
-												</div>
-											  </div>
-											</form>
-										</div>
+										<section class="login-text mx-auto">
+											<h2 class="continue-login-heading">Select Application…</h2>
+											<ul class="login-widget">
+												<li>
+													<a href="#">
+														TRIBE
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="images/logo-deteet.png" alt="Logo" />
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														TRUE
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														TROOP
+													</a>
+												</li>
+											</ul>
+										</section>
 									</div>
 								</div>
 								
@@ -252,33 +247,17 @@
 	
 	
 	
+	
+	
+	
     <!-- JS Start -->
     <script src="js/main.min.js"></script>
 	<script src="js/simplebar.min.js"></script>
 	<script src="js/metisMenu.min.js"></script>
     <script src="js/common.ui.js"></script>
-	<script>
-		 var x;
-		function getLocation()
-		 {
-		if (navigator.geolocation)
-		{
-			navigator.geolocation.getCurrentPosition(showPosition);
-		}
-		else{x.innerHTML="Geolocation is not supported by this browser.";}
-		}
-		function showPosition(position)
-		{
-			
-			var v1 = position.coords.latitude;
-			var v2 = position.coords.longitude;
-			document.getElementById("latitude").setAttribute('value',v1) ;
-			document.getElementById("longitude").setAttribute('value',v2);
-		}
-		getLocation()
-	</script>
+	
+
 	 <!-- JS End -->
-	 
 </body>
 </html>
 
