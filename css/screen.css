@@ -605,6 +605,9 @@ input:-webkit-autofill{transition: all 5000s ease-in-out 0s;}
 .btn-gray{background: transparent linear-gradient(180deg, #B5B5B5 0%, #707070 100%) 0% 0% no-repeat;padding:9px 12px 5px; color: #fff; font-size:16px;font-family: 'solitasnorm_medium'; border-radius: 12px;font-weight: normal;}
 .btn-gray:hover, .btn-gray:focus{background: transparent linear-gradient(180deg, #707070 0%, #B5B5B5 100%) 0% 0% no-repeat; color: #fff;}
 
+.btn-light-gray{background: transparent linear-gradient(180deg, #fff 0%, #DDDDDD 100%) 0% 0% no-repeat;padding:9px 12px 5px; color:#9B9B9B; font-size:14px;font-family: 'solitasnorm_book';  line-height:1; font-weight:normal; border-radius: 12px; border:solid 1px #B5B5B5;}
+.btn-light-gray:hover, .btn-light-gray:focus{background: transparent linear-gradient(180deg, #DDDDDD 0%, #fff 100%) 0% 0% no-repeat; color: #9B9B9B;}
+
 .bg-light-yellow{background:#EDEDDC; padding:20px; border-radius: 24px; font-size:14px;font-family: 'solitasnorm_book';}
 .activity-time{font-size:14px;font-family: 'solitasnorm_book';}
 .carousel-day{margin-bottom:20px;}
@@ -1125,6 +1128,34 @@ input.e-input, input[type="text"].e-input, .e-input.e-placeholder {color: #70707
 .like-btn{position: absolute; right: 10px; bottom: 10px;}
 .like-btn i{font-size:36px;}
 
+/*EPP*/
+.btn-list{padding:0; margin:0; display:flex;flex-wrap: wrap;justify-content: center;border: 0;}
+.btn-list li{padding:0; margin: 0 0 20px; display:flex;width: 100%;}
+.btn-list li a{ background: transparent linear-gradient(180deg, #8EB2FF 0%, #3F7BFC 100%) 0% 0% no-repeat; flex-direction: row;border-radius: 12px; display:flex; width: 100%; max-width: 400px;padding:15px 20px; color: #EFF5FF;font-family: 'solitasnorm_medium';font-weight: normal; font-size:16px;box-shadow: 0px 3px 6px #00000029;align-items: center;}
+.btn-list li a:hover, .btn-list li a:focus{ background: transparent linear-gradient(180deg, #3F7BFC 50%, #8EB2FF 100%) 0% 0% no-repeat;}
+.btn-list li a.active{border:solid 1px #3F7BFC; color:#3F7BFC; background:#fff;}
+.btn-list li a i{margin-right: 10px;font-size: 22px;}
+
+.btn-list li a.red-btn{ background: transparent linear-gradient(180deg, #FE9F7F 0%, #F42D25 100%) 0% 0% no-repeat;}
+.btn-list li a.red-btn:hover, .btn-list li a.red-btn:focus{ background: transparent linear-gradient(180deg, #F42D25 50%, #FE9F7F 100%) 0% 0% no-repeat;}
+.btn-list li a.red-btn.active{border:solid 1px #FE9F7F; background:#fff; color:#FE9F7F;}
+
+.heading-orange{background:#F84F00; text-align:center; color:#fff; font-size: 24px; padding: 10px 0;  line-height: 1;    margin: 0;}
+
+.ov-list{padding:0; margin:0; display:flex;flex-wrap: wrap; background:rgb(142 178 255 / 18%); justify-content: center;}
+.ov-list li{padding:20px; margin: 0 10% 20px; display:flex; flex-direction: column; background:#fff; width: 100%;}
+.ov-list li h3{font-size: 22px; color:#0651A6;font-family: 'solitasnorm_medium';font-weight: normal;}
+.ov-list li h4{font-size: 18px; color:#707070;font-family: 'solitasnorm_medium';font-weight: normal;}
+.ov-list li p{font-size: 15px; color:#707070;}
+
+.large-img-header.modal-header .close.modal-custom-close{right: -22px; top: -15px;}
+.large-img-header.modal-header{padding:0;}
+
+.owl-img-slider{margin: 0 auto; max-width: 600px;}
+.owl-img-slider img{ margin:0 auto;}
+.owl-img-slider.owl-carousel .owl-nav button.owl-next, .owl-img-slider.owl-carousel .owl-nav button.owl-prev{background: #004190; width: 34px; height: 34px; border-radius: 50%;  color: #fff;  font-size: 30px;  line-height: 1; position: absolute; top: 50%;}
+.owl-img-slider.owl-carousel .owl-nav button.owl-next{right:-50px;}
+.owl-img-slider.owl-carousel .owl-nav button.owl-prev{left:-50px;}
 
 
 
@@ -1321,5 +1352,11 @@ input.e-input, input[type="text"].e-input, .e-input.e-placeholder {color: #70707
 	
 	.table-profile{position: absolute;  left: 40px;  width: auto;  top: 10px;}
 	.table-profile-td{position:relative;}
+	
+	.ov-list li {margin: 0 4% 20px;}
+	
+	.owl-img-slider.owl-carousel .owl-nav button.owl-next, .owl-img-slider.owl-carousel .owl-nav button.owl-prev{top:inherit; bottom:-20px;}
+	.owl-img-slider.owl-carousel .owl-nav button.owl-prev{left:0;}
+	.owl-img-slider.owl-carousel .owl-nav button.owl-next{right:0;}
 	
 }
