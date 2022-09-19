@@ -216,7 +216,7 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="table-hld mb-4">
-											<div class="table-filter mt-4 mb-4">
+											<div class="table-filter mt-4 mb-4 d-none d-sm-block">
 												<form>
 												  <div class="form-row align-items-center justify-content-between">
 													<div class="col-auto">
@@ -465,6 +465,50 @@
 											
 											</div>
 										
+											<div class="table-filter mt-4 mb-4 d-block d-sm-none">
+												<form>
+												  <div class="form-row align-items-center justify-content-between">
+													<div class="col-auto">
+														<div class="form-row">
+															<div class="col-auto mb-3">
+																<select class="border-12 border-light selectpicker" id="">
+																  <option>Reservation date</option>
+																  <option>Reservation time</option>
+																</select>
+															</div>
+															<div class="col-auto mb-3">
+																<select class="selectpicker" id="">
+																  <option>Type</option>
+																  <option>ALL</option>
+																  <option>Type 1</option>
+																  <option>Type 2</option>
+																</select>
+															</div>
+															<div class="col-auto mb-3">
+																<select class="selectpicker" id="">
+																  <option>Status</option>
+																  <option>In Use</option>
+																  <option>Booked</option>
+																  <option>Cancel</option>
+																  <option>Ended</option>
+																  <option>Expired</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-auto mb-3">
+														<select class="selectpicker" id="">
+														  <option>Select</option>
+														  <option>Excel</option>
+														  <option>CSV</option>
+														  <option>PDF</option>
+														</select>
+														<input type="button" class="btn btn-border btn-blue-border ml-0 ml-md-3 mt-3 mt-md-0" value="Download" placeholder="">
+													</div>
+												  </div>
+												</form>
+											</div>
 											
 										</div>
 									</div>
