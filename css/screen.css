@@ -33,7 +33,7 @@ input:-webkit-autofill{transition: all 5000s ease-in-out 0s;}
 .login-text p a{text-decoration:underline;}
 .login-text p a:hover{text-decoration:none;}
 .form-control{border:solid 1px #D3D8DA;box-shadow: 0px 0px 6px #0000000F;}
-.btn-blue{min-width: 180px; background:linear-gradient(180deg, #3B6EC9 0%, #1D4999 100%);	box-shadow: 0px 3px 6px #00000029;	border-radius: 5px;	border:0;}
+.btn-blue{min-width: 180px; background:linear-gradient(180deg, #3B6EC9 0%, #1D4999 100%);	box-shadow: 0px 3px 6px #00000029;	border-radius: 12px;	border:0;}
 .btn-blue:hover, .btn-blue:focus{background:linear-gradient(180deg, #3B6EC9 100%, #1D4999 0%);}
 .app-btn{background: #004190; position:relative; box-shadow: 0px 3px 6px #00000029;	border: 3px solid #F8F8F8;border-radius: 12px;display: block; text-align:left; padding:7px 20px 7px 60px;}
 .app-btn p{font-size:16px; line-height:20px; color:#fff; display:block; margin:0; padding:0;}
@@ -594,19 +594,19 @@ input:-webkit-autofill{transition: all 5000s ease-in-out 0s;}
 .sub-heading{font-size:18px; color: #707070;font-family: 'solitasnorm_book';  line-height:1; font-weight:normal;}
 
 /*Button Green*/
-.btn-green{background: transparent linear-gradient(180deg, #54D69B 0%, #32BA7C 100%) 0% 0% no-repeat;padding:9px 12px 5px; color: #F8F8F8; font-size:16px;font-family: 'solitasnorm_medium'; border-radius: 12px;font-weight: normal;}
-.btn-green:hover, .btn-green:focus{background: transparent linear-gradient(180deg, #32BA7C 0%, #54D69B 100%) 0% 0% no-repeat; color: #fff;}
+.btn-green{background: transparent linear-gradient(180deg, #54D69B 0%, #32BA7C 100%) 0% 0% no-repeat;padding:9px 12px 5px; color: #F8F8F8; font-size:16px;font-family: 'solitasnorm_medium'; border-radius: 12px;font-weight: normal;background-origin: border-box;}
+.btn-green:hover, .btn-green:focus{background: transparent linear-gradient(180deg, #32BA7C 0%, #54D69B 100%) 0% 0% no-repeat; color: #fff;background-origin: border-box;}
 
 /*Button Orange*/
-.btn-orange{background: transparent linear-gradient(180deg, #FF7F7F80 0%, #F45825 100%) 0% 0% no-repeat; padding:9px 12px 5px; color: #F8F8F8; font-size:16px;font-family: 'solitasnorm_medium'; border-radius: 12px;font-weight: normal;}
-.btn-orange:hover, .btn-orange:focus{background: transparent linear-gradient(180deg, #F45825 0%, #FF7F7F80 100%) 0% 0% no-repeat; color: #fff;}
+.btn-orange{background: transparent linear-gradient(180deg, #FF7F7F80 0%, #F45825 100%) 0% 0% no-repeat; padding:9px 12px 5px; color: #F8F8F8; font-size:16px;font-family: 'solitasnorm_medium'; border-radius: 12px;font-weight: normal;background-origin: border-box;}
+.btn-orange:hover, .btn-orange:focus{background: transparent linear-gradient(180deg, #F45825 0%, #FF7F7F80 100%) 0% 0% no-repeat; color: #fff;background-origin: border-box;}
 
 /*Button Gray*/
-.btn-gray{background: transparent linear-gradient(180deg, #B5B5B5 0%, #707070 100%) 0% 0% no-repeat;padding:9px 12px 5px; color: #fff; font-size:16px;font-family: 'solitasnorm_medium'; border-radius: 12px;font-weight: normal;}
-.btn-gray:hover, .btn-gray:focus{background: transparent linear-gradient(180deg, #707070 0%, #B5B5B5 100%) 0% 0% no-repeat; color: #fff;}
+.btn-gray{background: transparent linear-gradient(180deg, #B5B5B5 0%, #707070 100%) 0% 0% no-repeat;padding:9px 12px 5px; color: #fff; font-size:16px;font-family: 'solitasnorm_medium'; border-radius: 12px;font-weight: normal;background-origin: border-box;}
+.btn-gray:hover, .btn-gray:focus{background: transparent linear-gradient(180deg, #707070 0%, #B5B5B5 100%) 0% 0% no-repeat; color: #fff;background-origin: border-box;}
 
-.btn-light-gray{background: transparent linear-gradient(180deg, #fff 0%, #DDDDDD 100%) 0% 0% no-repeat;padding:9px 12px 5px; color:#9B9B9B; font-size:14px;font-family: 'solitasnorm_book';  line-height:1; font-weight:normal; border-radius: 12px; border:solid 1px #B5B5B5;}
-.btn-light-gray:hover, .btn-light-gray:focus{background: transparent linear-gradient(180deg, #DDDDDD 0%, #fff 100%) 0% 0% no-repeat; color: #9B9B9B;}
+.btn-light-gray{background: transparent linear-gradient(180deg, #fff 0%, #DDDDDD 100%) 0% 0% no-repeat;padding:9px 12px 5px; color:#9B9B9B; font-size:14px;font-family: 'solitasnorm_book';  line-height:1; font-weight:normal; border-radius: 12px; border:solid 1px #B5B5B5;background-origin: border-box;}
+.btn-light-gray:hover, .btn-light-gray:focus{background: transparent linear-gradient(180deg, #DDDDDD 0%, #fff 100%) 0% 0% no-repeat; color: #9B9B9B;background-origin: border-box;}
 
 .bg-light-yellow{background:#EDEDDC; padding:20px; border-radius: 24px; font-size:14px;font-family: 'solitasnorm_book';}
 .activity-time{font-size:14px;font-family: 'solitasnorm_book';}
@@ -668,12 +668,12 @@ input:-webkit-autofill{transition: all 5000s ease-in-out 0s;}
 .dayweek-list li .avg{color:#ffbe07;}
 
 /*Forms*/
-.form-control{color:#707070; font-size:16px;}
+.form-control{color:#707070; font-size:16px;border-radius: 12px;}
 .form-control option {padding:8px 10px;}
 .border-12 {border-radius:12px;}
 .border-light{border-color:#F2F2F2;}
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {  width: 180px;}
-.bootstrap-select>.dropdown-toggle{border-color:#F2F2F2;border-radius:12px;font-size: 16px; color: #707070;}
+.bootstrap-select>.dropdown-toggle{border-color:#D3D8DA;border-radius:12px;font-size: 16px; color: #707070;}
 .btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle { color: #212529; background-color: #fff;  border-color: #d3d9df;}
 .bootstrap-select .dropdown-toggle:focus { outline: none;   outline-offset: 0;box-shadow:none;}
 .btn-light.focus, .btn-light:focus { background-color: #fff;}
@@ -1157,6 +1157,14 @@ input.e-input, input[type="text"].e-input, .e-input.e-placeholder {color: #70707
 .owl-img-slider.owl-carousel .owl-nav button.owl-next{right:-50px;}
 .owl-img-slider.owl-carousel .owl-nav button.owl-prev{left:-50px;}
 
+/*15-09-2022*/
+.workspace-list .workspace-right {justify-content: center;}
+.e-datepicker::placeholder {font-style:normal;}
+.e-datepicker:-ms-input-placeholder {font-style:normal;}
+.e-datepicker::-ms-input-placeholder {font-style:normal;}
+.bootstrap-select>.disabled {background-color: #e9ecef;}
+.form-control:disabled, .form-control[readonly] {opacity: .65;}
+.e-datetime-wrap.e-disable .e-padding, .e-datetimepicker.e-js.e-input.e-disable{background: #e9ecef;opacity: .65;}
 
 
 /*Footable For alllist page*/
@@ -1358,5 +1366,15 @@ input.e-input, input[type="text"].e-input, .e-input.e-placeholder {color: #70707
 	.owl-img-slider.owl-carousel .owl-nav button.owl-next, .owl-img-slider.owl-carousel .owl-nav button.owl-prev{top:inherit; bottom:-20px;}
 	.owl-img-slider.owl-carousel .owl-nav button.owl-prev{left:0;}
 	.owl-img-slider.owl-carousel .owl-nav button.owl-next{right:0;}
+	
+	/*--- 15-09-2022*/
+	.login-bg {height: 300px;}
+	.app-btn{padding: 7px 10px 7px 50px;}
+	.app-icon {left: 12px;}
+	.app-btn-list {flex-direction: row;}
+	.app-btn-list li {width: 49%;}
+	.app-btn p {font-size: 14px;line-height: 18px;}
+	.app-btn p span {font-size: 16px; line-height: 22px;}
+	
 	
 }
