@@ -1176,6 +1176,13 @@ input.e-input, input[type="text"].e-input, .e-input.e-placeholder {color: #70707
 .btn-input{padding:7px 12px 5px;}
 .qr-img{width:30%;}
 
+.meetings-icons{display:flex; margin-top:10px;}
+.meetings-icons .icon{margin:0 10px 0 0; display: flex;}
+.meetings-icons .icon svg{width:20px;}
+.meetings-icons .icon svg path{fill:#999999;}
+.meetings-icons .icon.active svg path{fill:#FF4607;}
+.meetings-icons .icon #projector-ready, .meetings-icons .icon #projector{width:28px;}
+
 
 /*Footable For alllist page*/
 @media only screen and (max-width: 991px) {
